@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "1083967775479",
+    "firebase_url": "https://lithe-firebase-demo.firebaseio.com",
+    "project_id": "lithe-firebase-demo",
+    "storage_bucket": "lithe-firebase-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083967775479:android:d5a705a934b3a178",
+        "android_client_info": {
+          "package_name": "com.lithe.flourishcustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083967775479-7ce0sah01098gj1m0q1h4is8pmin5lmf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lithe.flourishcustomer",
+            "certificate_hash": "5b9e2854b09b02d457a5f991c94df1770ac1cf89"
+          }
+        },
+        {
+          "client_id": "1083967775479-hgi35sk81tc6f0c2pt4614gv4l68s28p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC03NHOpCw1HFfDOgHRLKNd9wwLei0yc-Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083967775479-hgi35sk81tc6f0c2pt4614gv4l68s28p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1083967775479-pplu2tln556o3o2mg33l6ta0ecsb17gt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lithe.flourishcustomer"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083967775479:android:c671d2c751c10234",
+        "android_client_info": {
+          "package_name": "com.lithe.flourishdeliveryboy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083967775479-ju5ir0r9u2q40ec4t8311ag5beudhsrf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lithe.flourishdeliveryboy",
+            "certificate_hash": "5b9e2854b09b02d457a5f991c94df1770ac1cf89"
+          }
+        },
+        {
+          "client_id": "1083967775479-hgi35sk81tc6f0c2pt4614gv4l68s28p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC03NHOpCw1HFfDOgHRLKNd9wwLei0yc-Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083967775479-hgi35sk81tc6f0c2pt4614gv4l68s28p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1083967775479-pplu2tln556o3o2mg33l6ta0ecsb17gt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lithe.flourishcustomer"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

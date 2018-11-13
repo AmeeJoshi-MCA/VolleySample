@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:src="@drawable/milk_and_more_logo" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/activity_sign_up_icon_view_email"
+                android:layout_width="@dimen/form_field_regular_icon_size"
+                android:layout_height="@dimen/form_field_regular_icon_size"
+                android:layout_alignBottom="@+id/activity_sign_up_input_layout_email"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_email" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/activity_sign_up_input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/activity_sign_up_icon_view_email"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/activity_sign_up_edittext_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/bw_7"
+                    android:textColorHint="@color/bw_a"
+                    android:textSize="@dimen/form_field_text_size"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_below="@+id/activity_sign_up_input_layout_email"
+                android:layout_toEndOf="@+id/activity_sign_up_icon_view_email"
+                android:background="@color/bw_a" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/activity_sign_up_icon_view_password"
+                android:layout_width="@dimen/form_field_regular_icon_size"
+                android:layout_height="@dimen/form_field_regular_icon_size"
+                android:layout_alignBottom="@+id/activity_sign_up_input_layout_password"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_password" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/activity_sign_up_input_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/activity_sign_up_icon_view_password"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/activity_sign_up_edittext_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Password"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/bw_7"
+                    android:textColorHint="@color/bw_a"
+                    android:textSize="@dimen/form_field_text_size"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_below="@+id/activity_sign_up_input_layout_password"
+                android:layout_toEndOf="@+id/activity_sign_up_icon_view_password"
+                android:background="@color/bw_a" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <com.lithe.service.customviews.IconView
+                android:id="@+id/activity_sign_up_icon_view_device_name"
+                android:layout_width="@dimen/form_field_regular_icon_size"
+                android:layout_height="@dimen/form_field_regular_icon_size"
+                android:layout_alignBottom="@+id/activity_sign_up_input_layout_device_name"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_device_black"
+                app:iconViewColor="@color/bw_9"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/activity_sign_up_input_layout_device_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/activity_sign_up_icon_view_device_name"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/activity_sign_up_edittext_device_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Device Name"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/bw_7"
+                    android:textColorHint="@color/bw_a"
+                    android:textSize="@dimen/form_field_text_size"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_below="@+id/activity_sign_up_input_layout_device_name"
+                android:layout_toEndOf="@+id/activity_sign_up_icon_view_device_name"
+                android:background="@color/bw_a" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/activity_sign_up_text_button_register_device"
+            android:layout_width="@dimen/big_button_width"
+            android:layout_height="@dimen/big_button_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/radius_10_background_theme_green"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="REGISTER DEVICE"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_button_text_size"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <TextView
+            android:id="@+id/activity_sign_up_text_button_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:text=""
+            android:textSize="@dimen/text_size_default"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+</LinearLayout>

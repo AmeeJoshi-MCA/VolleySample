@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fragment_pickup_order_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        app:tabIndicatorColor="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_pickup_order_layout_button_container"
+        android:layout_below="@+id/fragment_pickup_order_tab_layout"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/bw_a" />
+
+
+        <LinearLayout
+            android:id="@+id/today_listing_cell_layout_parent"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textview_item_name"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="center|bottom"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/bw_8"
+                android:text="ITEM NAME" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center|bottom"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/bw_8"
+                android:text="ASSIGN QTY" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center|bottom"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:id="@+id/textview_assign_qty"
+                android:textColor="@color/bw_8"
+                android:text="PICKUP QTY" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_pickup_order_recycler_view_item_total"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/fragment_pickup_order_layout_total_summary" />
+
+            <RelativeLayout
+                android:id="@+id/fragment_pickup_order_layout_total_summary"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/bw_a" />
+
+                <TextView
+                    android:id="@+id/textview_item_summery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:paddingTop="2dp"
+                    android:layout_marginStart="30dp"
+                    android:gravity="center_vertical"
+                    android:text="Total Summary"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textview_item_summery_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingTop="2dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_pickup_order_layout_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/activity_today_textview_accept"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/big_button_height"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/radius_10_background_theme_green"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="ACCEPT"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_button_text_size"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/activity_today_textview_reject"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/big_button_height"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0"
+            android:background="@drawable/radius_10_background_theme_green"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="REJECT"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_button_text_size"
+            android:visibility="gone"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/bw_a"
+        android:layout_above="@+id/fragment_pickup_order_layout_button_container" />
+
+    <TextView
+        android:id="@+id/text_no_records"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:text="No Records"
+        android:textColor="?attr/colorAccent"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

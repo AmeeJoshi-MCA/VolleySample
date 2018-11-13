@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bw_e">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/card_background_white_with_border">
+
+            <com.lithe.service.customviews.IconView
+                android:id="@+id/layout_search_box_icon_view_search"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="7.5dp"
+                android:background="@drawable/ic_search_black"
+                app:iconViewColor="@color/bw_b" />
+
+            <EditText
+                android:id="@+id/layout_search_box_edittext_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/layout_search_box_icon_view_search"
+                android:layout_toStartOf="@+id/layout_search_box_icon_view_cancel"
+                android:background="@android:color/transparent"
+                android:hint="Search"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/theme_general_color_2"
+                android:textSize="@dimen/form_field_regular_text_size"
+                tools:ignore="HardcodedText" />
+
+            <com.lithe.service.customviews.IconView
+                android:id="@+id/layout_search_box_icon_view_cancel"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="7.5dp"
+                android:background="@drawable/ic_close_cancel_black"
+                app:iconViewColor="@color/bw_b" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_search_box_frame_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_black_half" />
+
+</LinearLayout>

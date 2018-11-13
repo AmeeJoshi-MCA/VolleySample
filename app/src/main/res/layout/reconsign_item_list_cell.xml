@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/today_listing_cell_layout_parent"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:layout_height="35dp">
+
+    <LinearLayout
+        android:id="@+id/today_listing_cell_layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_reconsign_item_text_item_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="FRESH MILK"
+            android:layout_weight="3" />
+
+        <TextView
+            android:id="@+id/activity_reconsign_item_text_assign_qty"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="50"
+            android:layout_weight="2" />
+
+        <TextView
+            android:id="@+id/activity_reconsign_item_text_deliver_qty"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="25"
+            android:layout_weight="2" />
+
+        <EditText
+            android:id="@+id/activity_reconsign_item_text_damage_qty"
+            android:layout_width="40dp"
+            android:maxWidth="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="5"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:maxLength="4"
+            android:imeOptions="actionNext"
+            android:background="@drawable/black_border_background" />
+
+        <TextView
+            android:id="@+id/activity_reconsign_item_text_avail_qty"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="20"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:clickable="true"
+    android:focusable="true"
+    android:longClickable="true">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/navigation_drawer_layout_recycle_view_menu_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/navigation_drawer_layout_text_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGOUT"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_alignParentBottom="true" />
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/shadow_from_left" />
+
+</RelativeLayout>

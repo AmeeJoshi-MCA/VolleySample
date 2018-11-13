@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/dialog_product_detail_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_size"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:id="@+id/dialog_product_detail_frame_back"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="40dp"
+            android:layout_height="@dimen/action_bar_size"
+            android:layout_marginStart="5dp"
+            android:clickable="true"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:padding="0dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_back" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/dialog_product_detail_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="visible"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_product_detail_layout_header">
+
+        <LinearLayout
+            android:id="@+id/today_listing_cell_layout_parent"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_height="25dp">
+
+            <TextView
+                android:id="@+id/activity_reconsign_item_text_item_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/bw_8"
+                android:text="ITEM NAME"
+                android:layout_weight="3" />
+
+            <TextView
+                android:id="@+id/activity_reconsign_item_text_assign_qty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Assign"
+                android:textColor="@color/bw_8"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/activity_reconsign_item_text_deliver_qty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/bw_8"
+                android:text="Delivered"
+                android:layout_weight="2" />
+
+            <TextView
+                android:id="@+id/activity_reconsign_item_text_damage_qty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/bw_8"
+                android:text="Damage"
+                android:layout_weight="2" />
+
+            <TextView
+                android:id="@+id/activity_reconsign_item_text_avail_qty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/bw_8"
+                android:text="Available"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_reconsign_item_recycler_view_reconsign_item_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/shadow_from_top"
+        android:layout_below="@+id/dialog_product_detail_layout_header"/>
+
+    <TextView
+        android:id="@+id/activity_reconsign_text_button_end_day"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/big_button_height"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:background="@drawable/radius_10_background_theme_green"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="END DAY"
+        android:textColor="@color/white"
+        android:textSize="@dimen/big_button_text_size"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/text_no_records"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:text="No Records"
+        android:textColor="?attr/colorAccent"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

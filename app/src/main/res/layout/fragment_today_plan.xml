@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/fragment_today_plan_tab_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <RelativeLayout
+            android:id="@+id/fragment_today_plan_layout_normal_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/fragment_today_plan_text_button_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NORMAL"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_small"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/fragment_today_plan_text_normal_order_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_extra_small"
+                android:background="@drawable/circle_border_blue"
+                android:layout_toEndOf="@+id/fragment_today_plan_text_button_normal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="2dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/bw_9" />
+
+        <RelativeLayout
+            android:id="@+id/fragment_today_plan_layout_schedule_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/fragment_today_plan_text_button_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCHEDULE"
+                android:layout_centerInParent="true"
+                android:textColor="@color/bw_9"
+                android:textSize="@dimen/text_size_small"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/fragment_today_plan_text_schedule_order_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/bw_9"
+                android:textSize="@dimen/text_size_extra_small"
+                android:background="@drawable/circle_border_black"
+                android:layout_toEndOf="@+id/fragment_today_plan_text_button_schedule"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="2dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_today_plan_recycler_view_customer_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_today_plan_tab_button_container"
+        android:layout_marginTop="5dp"
+        android:layout_above="@+id/fragment_today_plan_layout_end_day_button_container" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_today_plan_layout_end_day_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/fragment_today_subscription_order_text_button_end_day"
+            android:layout_width="@dimen/big_button_width"
+            android:layout_height="@dimen/big_button_height"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/radius_10_background_theme_green"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Reconcile Item"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_button_text_size"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/fragment_today_plan_layout_end_day_button_container"
+        android:background="@drawable/shadow_from_bottom" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_today_plan_tab_button_container"
+        android:background="@drawable/shadow_from_top" />
+
+    <TextView
+        android:id="@+id/text_no_records"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:text="No Records"
+        android:textColor="?attr/colorAccent"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fragment_today_plan_listing_frame_search_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/layout_search_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top" />
+    </FrameLayout>
+
+</RelativeLayout>

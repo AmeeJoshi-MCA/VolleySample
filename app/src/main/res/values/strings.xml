@@ -1,0 +1,11 @@
+<resources>
+    <!--<string name="app_name">Flourish Delivery Boy</string>-->
+    <string name="app_name">MilkMor Delivery Boy</string>
+
+    <string name="enter_password">Please enter password</string>
+    <string name="enter_current_password">Please enter current password</string>
+    <string name="enter_new_password">Please enter new password</string>
+    <string name="enter_confirm_password">Please enter confirm password</string>
+    <string name="enter_matching_password">New password is not matching with confirm password</string>
+
+</resources>

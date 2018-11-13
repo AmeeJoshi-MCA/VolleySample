@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/bottom_sheet_fix_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:gravity="bottom">
+
+        <ListView
+            android:id="@+id/bottom_sheet_fix_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_sheet_fix_layout_buttons"
+            android:layout_margin="8dp"
+            android:background="@drawable/bottom_sheet_list_background"
+            android:divider="@drawable/bottom_sheet_list_divider"
+            android:dividerHeight="0.5dp"/>
+
+        <TextView
+            android:id="@+id/bottom_sheet_text_no_list_items"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/bottom_sheet_fix_layout_buttons"
+            android:layout_margin="8dp"
+            android:background="@drawable/bottom_sheet_list_background"
+            android:gravity="center"
+            android:text="No Records Found"
+            android:textColor="?attr/colorAccent"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/bottom_sheet_fix_layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/bottom_sheet_fix_button_cancel"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_sheet_button"
+                android:gravity="center"
+                android:text="CANCEL"
+                android:textColor="?attr/colorAccent"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/bottom_sheet_fix_button_ok"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_sheet_button"
+                android:gravity="center"
+                android:text="OK"
+                android:textColor="?attr/colorAccent"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

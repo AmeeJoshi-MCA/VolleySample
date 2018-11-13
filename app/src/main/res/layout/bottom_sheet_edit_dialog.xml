@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/bottom_sheet_edit_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_sheet_edit_layout_ok_cancel_buttons"
+            android:layout_margin="5dp"
+            android:background="@drawable/list_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bottom_sheet_edit_text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="Title"
+                android:textColor="@color/theme_general_color_1"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/bottom_sheet_edit_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bottom_sheet_edit_layout_ok_cancel_buttons"
+                android:layout_margin="10dp"
+                android:background="@drawable/list_background"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:hint="Enter Value"
+                android:textColor="@color/theme_general_color_1"
+                android:textColorHint="@color/theme_general_color_2"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_sheet_edit_layout_ok_cancel_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bottom_sheet_edit_button_cancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/big_button_height"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_10_background_theme_green"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="CANCEL"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_button_text_size"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/bottom_sheet_edit_button_divider"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/bottom_sheet_edit_button_ok"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/big_button_height"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_10_background_theme_green"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="OK"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_button_text_size"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

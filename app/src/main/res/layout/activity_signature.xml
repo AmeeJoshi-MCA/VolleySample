@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/theme_background_color">
+
+    <RelativeLayout
+        android:id="@+id/dialog_product_detail_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_size"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:id="@+id/dialog_product_detail_frame_back"
+            style="@android:style/Widget.ActionButton"
+            android:layout_width="40dp"
+            android:layout_height="@dimen/action_bar_size"
+            android:layout_marginStart="5dp"
+            android:clickable="true"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:padding="0dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_back" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/dialog_product_detail_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="visible"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/activity_signature_text_person_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:layout_below="@+id/dialog_product_detail_layout_header"
+        android:background="@color/white"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:textSize="@dimen/text_size_default"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/activity_signature_text_signature_pad_description"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@+id/signature_pad"
+        android:layout_alignEnd="@+id/signature_pad"
+        android:paddingBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="bottom|center_horizontal"
+        android:text="Draw your signature..."
+        android:textColor="@color/black"
+        android:background="@drawable/black_border"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_above="@+id/activity_signature_btn_container"
+        android:layout_below="@+id/activity_signature_text_person_detail"/>
+
+    <com.williamww.silkysignature.views.SignaturePad
+        android:id="@+id/signature_pad"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/transparent"
+        android:layout_above="@+id/activity_signature_btn_container"
+        android:layout_below="@+id/activity_signature_text_person_detail" />
+
+    <LinearLayout
+        android:id="@+id/activity_signature_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/activity_signature_text_button_done_signature"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/big_button_height"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/radius_10_background_theme_green"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="DONE SIGNATURE"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_button_text_size"
+            android:enabled="false"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/activity_signature_text_button_clear_signature"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/big_button_height"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/radius_10_background_theme_green"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="CLEAR SIGNATURE"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_button_text_size"
+            android:enabled="false"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/dialog_product_detail_layout_header"
+        android:alpha="0.50"
+        android:background="@drawable/shadow_from_top" />
+
+
+</RelativeLayout>

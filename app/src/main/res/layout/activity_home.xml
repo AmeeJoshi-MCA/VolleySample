@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background_color"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/activity_home_frame_navigation_view"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <include layout="@layout/navigation_drawer_layout" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_home_layout_main_contents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/activity_home_layout_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/activity_home_layout_header" />
+
+        <RelativeLayout
+            android:id="@+id/activity_home_layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_size"
+            android:background="@color/white">
+
+            <FrameLayout
+                android:id="@+id/activity_home_frame_drawer_icon"
+                style="@android:style/Widget.ActionButton"
+                android:layout_width="40dp"
+                android:layout_height="@dimen/action_bar_size"
+                android:layout_marginStart="5dp"
+                android:clickable="true"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:padding="0dp">
+
+                <com.lithe.service.customviews.IconView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_slider"
+                    app:iconViewColor="@color/bw_a" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/activity_home_text_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Milk&amp;More"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="visible"
+                tools:ignore="HardcodedText" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_home_recycle_view_menu_action_button_list"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@+id/activity_home_layout_header"
+            android:alpha="0.50"
+            android:background="@drawable/shadow_from_top" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

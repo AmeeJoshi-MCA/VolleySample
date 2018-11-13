@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cell_navigation_item_layout_parent"
+    style="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <View
+        android:id="@+id/cell_navigation_item_view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/cell_navigation_item_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:text="Title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
